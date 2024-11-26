@@ -8,10 +8,12 @@ const TaskList = () => {
         <h2 className='text-2xl font-semibold'>0</h2>
         <h3 className='text-xl font-medium'>Newwwww Task</h3>
       </div>
-
+            
     </div>
   )
 
 }
 
 export default TaskList
+
+ 
