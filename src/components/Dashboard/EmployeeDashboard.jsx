@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../other/Header'
 import TaskListNumber from '../../other/TaskListNumber'
-import TaskLists from '../Tasklist/TaskLists'
+import TaskList from '../Tasklist/TaskList';
 
 
 const EmployeeDashboard = () => {
@@ -11,7 +11,7 @@ const EmployeeDashboard = () => {
       
      <Header/>
      <TaskListNumber/>
-     <TaskLists/>
+     <TaskList/>
      
     
     </div>
