@@ -7,7 +7,7 @@ import TaskList from '../Tasklist/TaskList';
 const EmployeeDashboard = () => {
 
   return (
-    <div className='p-10 bg-[#1C1C1C] '>
+    <div className='p-10 bg-[#1C1C1C] h-screen '>
       
      <Header/>
      <TaskListNumber/>
