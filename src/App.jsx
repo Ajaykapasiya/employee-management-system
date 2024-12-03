@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 
-export default function App() {
+
+const App = () => {
+
+  useEffect(() => {
+    setLocalStorage()
+
+  },[])
+
+
   return (
-    <div>
+  
       <>
+       <Login/> 
       {/* <EmployeeDashboard/> */}
-      <Login/> 
-     <AdminDashboard/>
+     {/*<AdminDashboard/> */}
       </>
-    </div>
-  );
+    
+  )
 }
+
+export default App;
