@@ -151,35 +151,16 @@ const employees = [
       id: 1,
       email: "admin@example.com",
       password: "123",
-      tasks: [
-        {
-          taskTitle: "Monitor Performance",
-          taskDescription: "Review employee performance reports.",
-          taskDate: "2024-12-12",
-          category: "Management",
-          active: true,
-          newTask: true,
-          completed: false,
-          failed: false,
-        },
-        {
-          taskTitle: "Approve Budget",
-          taskDescription: "Approve the quarterly budget proposal.",
-          taskDate: "2024-12-13",
-          category: "Finance",
-          active: false,
-          newTask: false,
-          completed: true,
-          failed: false,
-        },
-      ],
-    },
-  ];
+     }];
   
   export const setLocalStorage = () => {
-         localStorage.setItem('empolyees' , JSON.stringify(employees))
+         localStorage.setItem('employees' , JSON.stringify(employees))
+         localStorage.setItem('admin' , JSON.stringify(admin))
   }
 
   export const getLocalStorage = () => {
-    
+    const employees = JSON.parse(localStorage.getItem('employees'));
+    const admin = JSON.parse(localStorage.getItem('admin'));
+       console.log(employees , admin);
+       
   }
