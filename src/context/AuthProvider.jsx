@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TextContext = ({children}) => {
+const AuthProvider = ({children}) => {
   return (
     <div>
       {children}
@@ -8,4 +8,4 @@ const TextContext = ({children}) => {
   )
 }
 
-export default TextContext
+export default AuthProvider
