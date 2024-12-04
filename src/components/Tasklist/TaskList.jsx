@@ -1,7 +1,7 @@
 import React from "react";
 
 const TaskList = () => {
-  console.log("TaskList component is rendering");
+  //console.log("TaskList component is rendering");
   return (
     <div
       id="tasklist"
