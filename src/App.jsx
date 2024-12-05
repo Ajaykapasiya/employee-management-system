@@ -6,7 +6,11 @@ import { getLocalStorage, setLocalStorage } from "./utils/localStorge";
 import { AuthContext } from "./context/AuthProvider";
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null)
+  const authData =useContext(AuthContext)
+console.log(authData.employees)   
+  
+ 
 
   const handleLogin = (email, password) => {
     if (email == "admin@me.com" && password == "123") {
@@ -14,7 +18,7 @@ const App = () => {
       
       
     } else if (email == "user@me.com" && password == "123") {
-      setUser('employee')
+      setUser('employees')
      
 f
     } else {
@@ -22,8 +26,7 @@ f
     }
   };
 
-  const data =useContext(AuthContext)
- 
+  
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ''}
