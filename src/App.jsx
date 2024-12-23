@@ -32,7 +32,7 @@ const App = () => {
         const employee = authData.employees.find((e) => email == e.email && e.password == password)
     if (employee) {
       setUser('employees')
-      setLocalStorage(employee)
+      setLoggedInUserData(employee)
       localStorage.setItem('loggedInUser' , JSON.stringify({role:'employees'}))
     }
        } 
