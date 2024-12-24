@@ -6,7 +6,7 @@ import TaskList from '../Tasklist/TaskList';
 
 
 const EmployeeDashboard = ({data}) => {
-  console.log(data);
+  //console.log(data);
   
 
   return (
