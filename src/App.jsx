@@ -4,6 +4,7 @@ import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorge";
 import { AuthContext } from "./context/AuthProvider";
+import { data } from "autoprefixer";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -12,15 +13,18 @@ const App = () => {
 
   const authData = useContext(AuthContext);
 
-  //useEffect(() => {
-  //  if (authData) {
-  //    const loggedInUser = localStorage.getItem("loggedInUser");
-  //    if(loggedInUser){
-  //      setUser(loggedInUser.role)
-  //    }
-  //  }
-  //}, [authData]);
- 
+  useEffect(()=>{
+const loggedInUser = localStorage.getItem('loggedInUser')
+
+if (loggedInUser) {
+  const userData = JSON.parse(loggedInUser)
+
+ setUser(userData.role)
+ setLoggedInUserData(userData.role)
+  
+}
+
+  })
   
 
   const handleLogin = (email, password) => {
@@ -33,7 +37,7 @@ const App = () => {
     if (employee) {
       setUser('employees')
       setLoggedInUserData(employee)
-      localStorage.setItem('loggedInUser' , JSON.stringify({role:'employees'}))
+      localStorage.setItem('loggedInUser' , JSON.stringify({role:'employees' , data:employee}))
     }
        } 
     else {

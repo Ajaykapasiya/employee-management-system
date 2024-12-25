@@ -13,22 +13,22 @@ const TaskList = ({data}) => {
       id="tasklist"
       className=" h-[55%] flex overflow-x-auto items-center justify-start w-full py-5 flex-nowrap mt-10 rounded-xl">
 
-        {data.tasks.map((elem)=>{
+        {data.tasks.map((elem , idx)=>{
          
          if (elem.active) {
-          return<AcceptTask/>
+          return<AcceptTask key={idx}/>
          }
 
          if (elem.NewTask) {
-          return <NewTask/>
+          return <NewTask key={idx}/>
          }
 
          if (elem.completed) {
-          return <CompleteTask/>
+          return <CompleteTask key={idx}/>
          }
 
         if (elem.failed) {
-          return <FailedTask/>
+          return <FailedTask key={idx}/>
         }
           
         })}
