@@ -6,6 +6,7 @@ import FailedTask from "./FailedTask";
 import { data } from "autoprefixer";
 
 const TaskList = ({data}) => {
+  
   console.log(data);
   
   return (

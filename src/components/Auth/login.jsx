@@ -9,8 +9,8 @@ const Login = ({handleLogin}) => {
   const submitHandler = (e) => {
     e.preventDefault();
     handleLogin(email , password)
-    console.log("email is", email);
-    console.log("password is ", password);
+   // console.log("email is", email);
+   // console.log("password is ", password);
   };
   return (
     <div className="flex h-screen w-screen items-center justify-center">
