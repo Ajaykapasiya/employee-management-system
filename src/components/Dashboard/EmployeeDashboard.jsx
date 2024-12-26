@@ -5,7 +5,7 @@ import TaskList from '../Tasklist/TaskList';
 
 
 
-const EmployeeDashboard = ({data}) => {
+const EmployeeDashboard = ({data,handleLogout}) => {
   //console.log(data);
   
 
@@ -14,7 +14,7 @@ const EmployeeDashboard = ({data}) => {
       
       
 
-     <Header data={data} />
+     <Header data={data} handleLogout={handleLogout}/>
      <TaskListNumber data={data}/>
      <TaskList data={data}/>
      
