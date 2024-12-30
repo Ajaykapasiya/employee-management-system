@@ -12,16 +12,7 @@ const AllTask = () => {
           <h5 className="w-1/5 bg-red-600 ">Active Task</h5>
           <h5 className="w-1/5 bg-red-600 ">Completed</h5>
         </div>
-      {authData.employees.map(function (elem) {
-        return <div className="bg-red-400 py-2 px-4 mb-3 flex justify-between rounded">
-          <h2 className="w-1/5 bg-red-600">{elem.firstname}</h2>
-          <h3 className="w-1/5 bg-red-600 ">Make a UI design </h3>
-          <h5 className="w-1/5 bg-red-600 ">Status</h5>
-          <h5 className="w-1/5 bg-red-600 ">Status</h5>
-        </div>
-      })}
-      
-    </div>
+      {
   )
 }
 
