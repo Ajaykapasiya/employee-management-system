@@ -2,6 +2,11 @@ import React, { useState } from "react";
 
 const CreateTask = () => {
 
+  const [taskTittle , setTaskTittle] = useState('');
+  const [taskDescription , setTaskDescription] = useState('');
+  const [taskdate , setTaskDate] = useState('');
+  const [assignTO , setAssignTO] = useState('');
+  const [category , setCategory] = useState('');
   
 
   const submitHandler = (e) => {
