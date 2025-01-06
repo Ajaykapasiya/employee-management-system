@@ -5,20 +5,7 @@ import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorge";
 import { AuthContext } from "./context/AuthProvider";
 
-const App = () => {
-  const [user, setUser] = useState(null);
-  const [loggedInUserData, setLoggedInUserData] = useState(null);
-  const authData = useContext(AuthContext);
 
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("loggedInUser");
-
-    if (loggedInUser) {
-      const userData = JSON.parse(loggedInUser);
-      setUser(userData.role);
-      setLoggedInUserData(userData.data);
-    }
-  }, []);
 
   const handleLogin = (email, password) => {
     if (email === "admin@me.com" && password === "123") {
