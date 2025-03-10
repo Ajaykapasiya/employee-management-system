@@ -35,7 +35,13 @@ const Login = ({handleLogin}) => {
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
-            
+            }}
+            required
+            className="text-white outline-none bg-transparent border-2 border-emerald-600 py-4 px-5 rounded-full text-xl mt-5 placeholder:text-grey-400"
+            type="password"
+            placeholder="Enter password"
+          />
+          <button className="text-white outline-none border-none border-2 bg-emerald-600 py-4 px-5 rounded-full text-xl mt-5 placeholder:text-white">
             Login
           </button>
         </form>
