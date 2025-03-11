@@ -27,9 +27,18 @@ const CreateTask = () => {
 
     data.forEach(function (elem) {
       if (assignTO === elem.firstname) {
-        console.log(elem);
+        elem.tasks.push(newTask)
+
+      elem.taskNumbers.newTask = elem.taskNumbers.newTask+1; 
       }
-    });
+    })
+
+   localStorage.setItem('employee' ,JSON.stringify("data"))
+    //setTaskTittle('')
+    //setCategory('')
+    //setAssignTO('')
+    //setTaskDate('')
+    //setTaskDescription('')
   };
 
   return (
