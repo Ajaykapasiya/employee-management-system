@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { act, useState } from "react";
 
 const CreateTask = () => {
 
@@ -8,10 +8,16 @@ const CreateTask = () => {
   const [assignTO , setAssignTO] = useState('');
   const [category , setCategory] = useState('');
   
+  const [task , setTask] = useState({})
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("Task created");
+    //console.log("Task created");
+
+    setTask ({ taskTittle , taskDescription , taskdate, category , active:false ,newTask:true,failed:false , completed:true})
+ 
+console.log(task);
+
   };
 
   return (

@@ -35,16 +35,15 @@ const App = () => {
           "loggedInUser",
           JSON.stringify({ role: "employee", data: employee })
         );
+      } else {
+        alert("Invalid Credentails");
       }
-     else {
-      alert("Invalid Credentails");
-     }
     }
   };
   const handleLogout = () => {
     setUser(null);
     setLoggedInUserData(null);
-    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem("loggedInUser");
   };
 
   return (
@@ -52,9 +51,12 @@ const App = () => {
       {!user ? (
         <Login handleLogin={handleLogin} />
       ) : user === "admin" ? (
-        <AdminDashboard handleLogout={handleLogout} />
+        <AdminDashboard changeUser = {setUser} />
       ) : (
-        <EmployeeDashboard data={loggedInUserData} handleLogout={handleLogout} />
+        <EmployeeDashboard
+          data={loggedInUserData}
+          changeUser = {setUser}
+        />
       )}
     </>
   );

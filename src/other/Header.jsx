@@ -1,19 +1,23 @@
 import React, { useState ,useEffect} from 'react'
 
-function Header({data,handleLogout}) {
+const Header = (props) => {
  // console.log(data);
- const [ userName , setUserName] = useState('')
- 
- useEffect(() => {
-  if (!data) {
-    setUserName('Admin')
+ //const [ userName , setUserName] = useState('')
+ //
+ //useEffect(() => {
+ // if (!data) {
+ //   setUserName('Admin')
+ // }
+ // else {
+ //   setUserName(data.firstname)
+ // }
+ // 
+//}, [data]);
+  const logOutUser = () => {
+    localStorage.setItem('loggedInUser' , '')
   }
-  else {
-    setUserName(data.firstname)
-  }
-  
-}, [data]);
-  
+
+
   return (
     <div className='flex items-end justify-between '>
       <h1 className='text-2xl px-8 py-3 font-medium'>Hello <br /> <span className='text-3xl font-semibold'>{userName}</span> 👋🏻</h1>

@@ -6,6 +6,8 @@ const AllTask = () => {
 
   return (
     <div className="bg-[#1c1c1c] p-5 rounded mt-5 h-60  ">
+        
+    
         <div className="bg-red-400 py-3 px-2 mb-5 flex justify-between rounded">
           <h2 className="text-lg font-medium w-1/5 ">Employee Name </h2>
           <h3 className="text-lg font-medium w-1/5 ">New Task </h3>
