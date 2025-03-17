@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 
 const CreateTask = () => {
-    const [userData , setUserData] = useContext(AuthContext);
-  
+  const [userData, setUserData] = useContext(AuthContext);
+
   const [taskTittle, setTaskTittle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [taskdate, setTaskDate] = useState("");
@@ -13,9 +13,8 @@ const CreateTask = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    //console.log("Task created");
 
-    setNewTask({
+    const newTaskData = {
       taskTittle,
       taskDescription,
       taskdate,
@@ -24,27 +23,24 @@ const CreateTask = () => {
       newTask: true,
       failed: false,
       completed: true,
-    });
+    };
 
     const data = userData.employees;
-    console.log(data);
-    
-
-    data.forEach(function (elem) {
+    data.forEach((elem) => {
       if (assignTO === elem.firstname) {
-        elem.tasks.push(newTask)
-
-      elem.taskNumbers.newTask = elem.taskNumbers.newTask+1; 
+        elem.tasks.push(newTaskData);
+        elem.taskNumbers.newTask += 1;
       }
-    })
- 
-       
+    });
 
-    //setTaskTittle('')
-    //setCategory('')
-    //setAssignTO('')
-    //setTaskDate('')
-    //setTaskDescription('')
+    setNewTask(newTaskData);
+
+    // Clear form fields
+    setTaskTittle('');
+    setCategory('');
+    setAssignTO('');
+    setTaskDate('');
+    setTaskDescription('');
   };
 
   return (
